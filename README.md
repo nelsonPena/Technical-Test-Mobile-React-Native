@@ -35,23 +35,43 @@ The project is structured to emphasize separation of concerns, modularity, and r
 
 ```
 src/
-├── components/
-│   ├── CryptoList/
-│   │   ├── CryptoList.tsx
-│   │   └── CryptoItem.tsx
-│   ├── CryptoDetail/
-│       ├── CryptoDetail.tsx
-│       └── CryptoDetail.test.tsx
-├── containers/
-│   ├── CryptoListContainer.tsx
-├── context/
-│   ├── CryptoContext.tsx
-├── services/
-│   ├── CryptoService.ts
-├── types/
-│   ├── models.ts
-│   ├── api.ts
-└── App.tsx
+├── presentation/                # UI layer
+│   ├── components/
+│   │   ├── CryptoList/
+│   │   │   ├── CryptoList.tsx
+│   │   │   ├── CryptoList.module.css
+│   │   │   └── CryptoItem.tsx
+│   │   └── CryptoDetail/
+│   │       ├── CryptoDetail.tsx
+│   │       └── CryptoDetail.module.css
+│   ├── containers/
+│   │   ├── CryptoListContainer.tsx
+│   │   └── CryptoDetailContainer.tsx
+│   └── navigation/
+│       ├── AppNavigator.tsx
+│       └── RootStack.tsx
+├── domain/                      # Business logic layer
+│   ├── models/                  # Domain entities
+│   │   └── Cryptocurrency.ts
+│   ├── usecases/                # Application-specific business rules
+│       └── FetchCryptocurrenciesUseCase.ts
+├── data/                        # Data operations
+│   ├── services/                # API service classes
+│   │   └── CryptoService.ts
+│   ├── repositories/            # Abstract repositories
+│   │   ├── CryptoRepository.ts
+│   │   └── CryptoRepositoryImpl.ts
+├── context/                     # Context providers
+│   └── CryptoContext.tsx
+├── shared/                      # Shared utilities
+│   ├── constants.ts             # App constants
+│   ├── types/                   # Shared types/interfaces
+│   │   ├── api.ts
+│   │   └── models.ts
+│   └── utils/                   # Shared helper functions
+│       ├── fetchData.ts
+│       └── formatUtils.ts
+└── App.tsx                      # App entry point
 ```
 
 ### **Key Components**

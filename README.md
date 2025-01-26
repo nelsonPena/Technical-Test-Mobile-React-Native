@@ -44,12 +44,9 @@ src/
 │   │   └── CryptoDetail/
 │   │       ├── CryptoDetail.tsx
 │   │       └── CryptoDetail.module.css
-│   ├── containers/
-│   │   ├── CryptoListContainer.tsx
-│   │   └── CryptoDetailContainer.tsx
-│   └── navigation/
-│       ├── AppNavigator.tsx
-│       └── RootStack.tsx
+│   └── containers/
+│       ├── CryptoListContainer.tsx
+│       └── CryptoDetailContainer.tsx
 ├── domain/                      # Business logic layer
 │   ├── models/                  # Domain entities
 │   │   └── Cryptocurrency.ts
@@ -64,13 +61,11 @@ src/
 ├── context/                     # Context providers
 │   └── CryptoContext.tsx
 ├── shared/                      # Shared utilities
-│   ├── constants.ts             # App constants
 │   ├── types/                   # Shared types/interfaces
 │   │   ├── api.ts
-│   │   └── models.ts
+│   │   └── components.ts
 │   └── utils/                   # Shared helper functions
-│       ├── fetchData.ts
-│       └── formatUtils.ts
+│       └── fetchData.ts
 └── App.tsx                      # App entry point
 ```
 

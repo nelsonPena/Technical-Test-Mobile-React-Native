@@ -50,14 +50,14 @@ src/
 ├── domain/                      # Business logic layer
 │   ├── models/                  # Domain entities
 │   │   └── Cryptocurrency.ts
-│   ├── usecases/                # Application-specific business rules
+│   └── usecases/                # Application-specific business rules
 │       └── FetchCryptocurrenciesUseCase.ts
 ├── data/                        # Data operations
 │   ├── services/                # API service classes
 │   │   └── CryptoService.ts
-│   ├── repositories/            # Abstract repositories
-│   │   ├── CryptoRepository.ts
-│   │   └── CryptoRepositoryImpl.ts
+│   └── repositories/            # Abstract repositories
+│       ├── CryptoRepository.ts
+│       └── CryptoRepositoryImpl.ts
 ├── context/                     # Context providers
 │   └── CryptoContext.tsx
 ├── shared/                      # Shared utilities
